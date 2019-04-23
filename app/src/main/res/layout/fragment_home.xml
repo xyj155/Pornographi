@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context=".view.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_15">
+
+        <ImageView
+            android:id="@+id/iv_scan"
+            android:layout_width="@dimen/dp_28"
+            android:layout_height="@dimen/dp_28"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_scan_code" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_toLeftOf="@+id/iv_search"
+            android:layout_toRightOf="@+id/iv_scan">
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingTop="@dimen/dp_6"
+                android:paddingBottom="@dimen/dp_6"
+                android:drawablePadding="@dimen/dp_8"
+                android:background="@drawable/home_search_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/ic_home_search"
+                android:ellipsize="end"
+                android:gravity="left|center"
+                android:text="搜索你想要的片..."
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_home_history" />
+    </RelativeLayout>
+
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/mg_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
