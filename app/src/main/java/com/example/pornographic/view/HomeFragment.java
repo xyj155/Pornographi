@@ -18,6 +18,7 @@ import com.example.pornographic.R;
 import com.example.pornographic.adapter.HomePagerAdapter;
 import com.example.pornographic.base.BaseFragment;
 import com.example.pornographic.weight.ColorFlipPagerTitleView;
+import com.example.pornographic.weight.CustomViewPager;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.ViewPagerHelper;
@@ -49,7 +50,7 @@ public class HomeFragment extends BaseFragment {
     @BindView(R.id.mg_title)
     MagicIndicator mgTitle;
     @BindView(R.id.vp_home)
-    ViewPager vpHome;
+    CustomViewPager vpHome;
     Unbinder unbinder;
     private List<Fragment> fragmentList = new ArrayList<>();
     private String[] title = {"推荐", "亚洲遗风", "欧美混血", "动漫卡通"};
@@ -68,11 +69,14 @@ public class HomeFragment extends BaseFragment {
         fragmentList.add(new HomeEuropeFragment());
         fragmentList.add(new HomeComicFragment());
         homePagerAdapter = new HomePagerAdapter(getChildFragmentManager(), fragmentList);
+        vpHome.setScanScroll(false);
         vpHome.setAdapter(homePagerAdapter);
         mgTitle.setBackgroundColor(Color.parseColor("#ffffff"));
         CommonNavigator commonNavigator7 = new CommonNavigator(getContext());
         commonNavigator7.setScrollPivotX(0.65f);
         commonNavigator7.setAdjustMode(true);
+        vpHome.setOffscreenPageLimit(4);
+
         commonNavigator7.setAdapter(new CommonNavigatorAdapter() {
             @Override
             public int getCount() {

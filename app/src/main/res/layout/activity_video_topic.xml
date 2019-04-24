@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.VideoTopicActivity">
+
+    <include layout="@layout/common_toolbar"/>
+    <com.example.pornographic.weight.ViewPageIndicator
+        android:id="@+id/vi_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_home"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_140" />
+</LinearLayout>

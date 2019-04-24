@@ -19,6 +19,10 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         instance = this;
-        applicationInitial.initBmob();
+        applicationInitial.initBmob()
+                .initBugly()
+                .initToast()
+                .initJpush()
+                .initPayment();
     }
 }

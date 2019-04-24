@@ -6,8 +6,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.Display;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.example.pornographic.R;
 import com.example.pornographic.util.StatusBarUtil;
 
 import java.util.ArrayList;
@@ -45,8 +49,23 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     }
 
+    public BaseActivity initToolbar(String title) {
+        TextView viewById = findViewById(R.id.tv_title);
+        viewById.setText(title);
+        ImageView viewById1 = findViewById(R.id.iv_close);
+        viewById1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        return this;
+    }
+
     public abstract int initActivityLayout();
+
     public abstract void initView();
+
     public abstract void initData();
 
     @Override

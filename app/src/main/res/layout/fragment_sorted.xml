@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-</android.support.constraint.ConstraintLayout>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_55"
+    android:textColor="#000"
+    android:textStyle="bold"
+    android:text="分类"
+    android:background="#fff"
+    android:gravity="center"
+    android:textSize="20sp"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ry_kind"/>
+</LinearLayout>

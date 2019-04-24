@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="@dimen/dp_3"
+    android:id="@+id/ll_item"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<com.example.pornographic.weight.CustomRoundAngleImageView
+    android:layout_width="match_parent"
+    android:id="@+id/iv_cover"
+    android:scaleType="centerCrop"
+    android:layout_height="@dimen/dp_180" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:padding="@dimen/dp_5"
+        android:maxLines="1"
+        android:id="@+id/tv_name"
+        android:ellipsize="end"
+        android:gravity="left|center"
+        android:text="测试测试测试测试测试测试测试"/>
+</LinearLayout>
