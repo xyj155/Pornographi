@@ -8,7 +8,7 @@
     tools:context=".view.VideoTopicActivity">
 
     <include layout="@layout/common_toolbar"/>
-    <com.example.pornographic.weight.ViewPageIndicator
+    <com.example.pornographic.weight.ViewPageTopicIndicator
         android:id="@+id/vi_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -17,5 +17,5 @@
         android:id="@+id/vp_home"
         android:visibility="visible"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_140" />
+        android:layout_height="match_parent" />
 </LinearLayout>

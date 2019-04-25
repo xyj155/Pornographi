@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="#fff"
+    android:layout_marginBottom="@dimen/dp_1"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_76">
+<com.example.pornographic.weight.CircleImageView
+    android:layout_width="@dimen/dp_55"
+    android:layout_margin="@dimen/dp_10"
+    android:id="@+id/iv_avatar"
+    android:src="@mipmap/app_icon"
+    android:layout_height="@dimen/dp_55" />
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:layout_centerVertical="true"
+        android:text="用户名"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_toRightOf="@+id/iv_avatar"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_5"
+        android:id="@+id/tv_time"
+        android:textSize="@dimen/dp_10"
+        android:text="2016-51-51"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

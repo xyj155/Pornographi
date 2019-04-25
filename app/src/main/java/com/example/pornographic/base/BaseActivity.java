@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.pornographic.R;
 import com.example.pornographic.util.StatusBarUtil;
+import com.example.pornographic.weight.MyDialog;
 
 import java.util.ArrayList;
 
@@ -30,6 +31,38 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 屏幕高
      */
     public static int SCREEN_HEIGHT;
+
+
+    public interface OnItemClickListener {
+        void onConfirm(MyDialog dialog);
+
+        void onCancel(MyDialog dialog);
+    }
+
+    private MyDialog myDialog1;
+
+    public void showMsgDialog(String title, String content, final OnItemClickListener onItemClickListener) {
+        myDialog1 = new MyDialog(this, new int[]{R.id.dialog_btn_close, R.id.dialog_btn_cancel});
+        if (myDialog1 != null) {
+            myDialog1.setContent(content);
+            myDialog1.setTitle(title);
+            myDialog1.setOnCenterItemClickListener(new MyDialog.OnCenterItemClickListener() {
+                @Override
+                public void onCenterItemClick(MyDialog dialog, View view) {
+                    int i = view.getId();
+                    if (i == R.id.dialog_btn_close) {
+                        dialog.dismiss();
+                        onItemClickListener.onCancel(dialog);
+                    } else if (i == R.id.dialog_btn_cancel) {
+                        onItemClickListener.onConfirm(dialog);
+                        dialog.dismiss();
+                    }
+                }
+            });
+            myDialog1.show();
+        }
+
+    }
 
 
     @Override

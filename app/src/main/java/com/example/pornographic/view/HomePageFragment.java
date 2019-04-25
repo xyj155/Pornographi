@@ -19,6 +19,7 @@ import com.example.pornographic.gson.Banner;
 import com.example.pornographic.weight.DecoratorViewPager;
 import com.example.pornographic.weight.ViewPageIndicator;
 import com.example.pornographic.weight.ViewPagerForScrollView;
+import com.example.pornographic.weight.toast.ToastUtils;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
@@ -160,13 +161,16 @@ public class HomePageFragment extends BaseFragment {
             case R.id.iv_hot:
                 break;
             case R.id.iv_select:
+                startActivity(new Intent(getContext(),VideoTopicActivity.class));
                 break;
             case R.id.iv_member:
                 startActivity(new Intent(getContext(), MemberActivity.class));
                 break;
             case R.id.iv_picture:
+
                 break;
             case R.id.iv_sign:
+                ToastUtils.show("待开发");
                 break;
         }
     }

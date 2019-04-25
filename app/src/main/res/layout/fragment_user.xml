@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:id="@+id/sml_user"
     android:layout_height="match_parent">
-
+<com.scwang.smartrefresh.layout.header.ClassicsHeader
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -64,7 +67,7 @@
                     android:paddingTop="@dimen/dp_4"
                     android:paddingRight="@dimen/dp_8"
                     android:paddingBottom="@dimen/dp_4"
-                    android:text="个人信息"
+                    android:text="填写邀请码"
                     android:textColor="#000000"
                     android:textSize="15sp"
                     android:textStyle="bold" />
@@ -93,11 +96,12 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/tv_invite_user"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingLeft="@dimen/dp_8"
                             android:paddingRight="@dimen/dp_3"
-                            android:text="8"
+                            android:text="0"
                             android:textColor="#000"
                             android:textSize="35sp"
                             android:textStyle="bold" />
@@ -157,7 +161,7 @@
 
 
             <TextView
-                android:id="@+id/tv_user_address"
+                android:id="@+id/tv_acount"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_55"
                 android:layout_marginTop="@dimen/dp_30"
@@ -165,7 +169,7 @@
                 android:gravity="center|left"
                 android:paddingLeft="@dimen/dp_15"
                 android:paddingRight="@dimen/dp_10"
-                android:text="绑定账号"
+                android:text="我的下线用户"
                 android:textColor="#000"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -183,7 +187,7 @@
                 android:gravity="center|left"
                 android:paddingLeft="@dimen/dp_15"
                 android:paddingRight="@dimen/dp_10"
-                android:text="积分兑换"
+                android:text="会员兑换"
                 android:textColor="#000"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -212,7 +216,7 @@
                 android:background="#fafafa" />
 
             <TextView
-                android:id="@+id/tv_user_feedback"
+                android:id="@+id/tv_user_password"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_55"
                 android:drawableRight="@mipmap/ic_navigation"
@@ -260,4 +264,4 @@
                 android:textStyle="bold" />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
-</android.support.v4.widget.SwipeRefreshLayout>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

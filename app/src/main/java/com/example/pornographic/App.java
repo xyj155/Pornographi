@@ -22,6 +22,7 @@ public class App extends Application {
         applicationInitial.initBmob()
                 .initBugly()
                 .initToast()
+                .initMob()
                 .initJpush()
                 .initPayment();
     }

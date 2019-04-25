@@ -1,10 +1,14 @@
 package com.example.pornographic.util;
 
+import android.util.Log;
+
 import com.example.pornographic.App;
 import com.example.pornographic.weight.toast.ToastUtils;
+import com.mob.MobSDK;
 import com.payelves.sdk.EPay;
 import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
+import com.tencent.bugly.beta.UpgradeInfo;
 
 import cn.bmob.v3.Bmob;
 import cn.jpush.android.api.JPushInterface;
@@ -19,6 +23,9 @@ public class ApplicationInitial {
     }
     public ApplicationInitial initToast() {
         ToastUtils.init(App.getInstance());
+        return this;
+    }    public ApplicationInitial initMob() {
+        MobSDK.init(App.getInstance(),"2ad59d9ca652d","d508e251cdd62bdc91e162f6a66880c2");
         return this;
     }
     public ApplicationInitial initPayment() {
@@ -35,7 +42,10 @@ public class ApplicationInitial {
         Beta.autoInit = true;
         Beta.autoCheckUpgrade = true;
         Bugly.init(App.getInstance(), "c02bea3990", false);
-
+        UpgradeInfo upgradeInfo = Beta.getUpgradeInfo();
+        Log.i(TAG, "initBugly: "+upgradeInfo);
         return this;
     }
+
+    private static final String TAG = "ApplicationInitial";
 }
